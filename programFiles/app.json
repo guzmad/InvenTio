@@ -1,5 +1,13 @@
 {
   "name": "Product Inventory Management System",
   "description": "This application helps track of warehouse inventory",
-  "image": "heroku/nodejs"
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs#v83"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
 }
