@@ -1,0 +1,5 @@
+{
+  "name": "Product Inventory Management System",
+  "description": "This application helps track of warehouse inventory",
+  "image": "heroku/nodejs"
+}
