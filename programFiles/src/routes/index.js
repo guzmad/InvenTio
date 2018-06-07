@@ -230,7 +230,7 @@ function createNewOrder(req, res, next) {
     return next();
   });
 }
-// --------------- GET method for creating an order calls the above declared 
+// --------------- GET method for creating an order calls the above declared
 router.post('/createOrder/:OrderID/:SalesPerson/:ExpectedDate/:StoreID', function (req, res) {
   const db = require('../../db');
   console.log("herro");
@@ -339,6 +339,7 @@ router.post('/register', function (req, res, next) {
   req.checkBody('passwordMatch', 'Password must be between 8-100 characters long').len(8, 100);
   req.checkBody('passwordMatch', 'Password does not match, please try again').equals(req.body.password);
 
+
   const errors = req.validationErrors();
   // if errors occur in the registration page, run this register page again
   if (errors) {
@@ -347,7 +348,6 @@ router.post('/register', function (req, res, next) {
     res.render('register', { title: 'Registration Error', errors: errors });
   }
   else {
-    console.log('else statement');
     const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
